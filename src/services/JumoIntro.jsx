@@ -35,7 +35,7 @@ class BJumoIntro extends React.Component
               
               <p>
                 <button className="btn btn-primary btn-sm">
-                  Learn more &raquo; </button>
+                  Learn more &raquo;</button>
                   
               </p>
               <span>                
