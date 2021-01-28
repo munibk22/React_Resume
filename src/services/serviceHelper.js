@@ -20,6 +20,25 @@ const onGlobalError = err => {
   return Promise.reject(err);
 };
 
+
+
+const logIn = (payload) => {
+   const config = {
+    method: "POST",
+    url: "https://api.remotebootcamp.dev/api/users/login",
+    data: payload,
+    withCredentials: true,
+    crossdomain: true,
+    headers: { "Content-Type": "application/json" }
+  };
+
+  return axios(config);
+};
+
+const testF = (data)=>{
+console.log("testF Successfull!",data)
+}
+
 const API_HOST_PREFIX = process.env.REACT_APP_API_HOST_PREFIX;
 const API_NODE_HOST_PREFIX = process.env.REACT_APP_API_NODE_HOST_PREFIX;
 
@@ -29,5 +48,5 @@ export {
   onGlobalError,
   onGlobalSuccess,
   API_HOST_PREFIX,
-  API_NODE_HOST_PREFIX
+  API_NODE_HOST_PREFIX, logIn, testF
 };
