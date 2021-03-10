@@ -1,6 +1,6 @@
 import React from"react"
-import {BrowserRouter, Route, NavLink} from "react-router-dom";
-import * as userService from "./serviceHelper"
+import {NavLink} from "react-router-dom";
+import * as userService from "../services/serviceHelper"
 
 function testAxios() {
     let data="Test Data";
@@ -18,7 +18,7 @@ function testAxios() {
 
  
 
-class ANavBar extends React.Component
+class NavBarA extends React.Component
 {  
 
     componentDidMount(){
@@ -107,4 +107,4 @@ class ANavBar extends React.Component
     }
 }
 
-export default ANavBar;
+export default NavBarA;

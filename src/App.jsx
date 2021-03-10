@@ -1,51 +1,57 @@
 import React, { Component } from "react";
-import {BrowserRouter, Route, NavLink} from "react-router-dom";
-import ANavbar from "./services/NavBar";
-import BJumboIntro from "./services/JumoIntro";
-import CContainer from "./services/CFooter";
-import DFooter from "./services/DFooter";
-import ELogin from "./services/Login";
+import {BrowserRouter, Route} from "react-router-dom";
+import NavBarA from './components/NavBarA'
+import BJumboIntro from "./components/JumoIntro";
+import CContainer from "./components/CFooter";
+import DFooter from "./components/DFooter";
+// import ELogin from "./components/Login";
 import "./App.css";
+import ProductForm from "./components/ProductForm"
+import NavBar from "./components/NavBar"
+import ProductsForm from "./components/ProductsForm";
+import RegisterB from "./components/RegisterB"
+import Login from "./components/Login";
+import Home from "./components/Home"
+import FriendsForm from "./components/FriendsForm"
+import NavC from "./components/NavBarC"
+import Friends from "./components/Friends"
 
+import Cars from "./components/Cars";
 class ClickApp extends Component {
-  // ""
+ 
   render() {
     return (
       <React.Fragment>
       <BrowserRouter>    
 
+      <div style={{width:""}}>
+      <NavBar></NavBar>
+      </div>
+     
+      <div style={{float:"left"}}>
+      <NavC></NavC>
+      </div>
+     
+
+      <Route path="/home" exact component ={Home}></Route>
+      <Route path='/userform' exact component = {ProductForm} ></Route>     
+      <Route path="/userregister" exact component = {RegisterB}></Route>    
       
-      <Route path='/navbar' exact component = {ANavbar} ></Route>       
+      <Route path="/login" exact component = {Login}></Route> 
+
+      <Route path='/navbar' exact component = {NavBarA} ></Route>       
       <Route path='/jumbo' exact component = {BJumboIntro} ></Route>     
       <Route path='/container' exact component = {CContainer}></Route>
       <Route path='/footer' exact component = {DFooter}></Route>
+      <Route path='/product' exact component={ProductsForm}></Route>
+      <Route path='/friendforms' exact component = {FriendsForm}></Route>
+     <Route path="/friends" exact component={Friends}></Route>
+     <Route path="/cars" exact component={Cars}></Route>
+      
 
-      <Route path='/login' exact component = {ELogin}></Route>
+      
 
-
-
-
-      <span style={{padding: '8px'}}>
-      <button className="btn btn-success btn-md" ><NavLink  to="/navbar" >NavLink Test </NavLink></button>
- </span>
- <span style={{padding: '8px'}}>
-       <button  style={{
-    padding: '8px'}}  className="btn btn-success btn-md" ><NavLink to="/jumbo">JumboLink Test </NavLink></button>
-</span>
-<span style={{padding: '8px'}}>
-       <button  style={{
-    paddingTop: '8px'}}  className="btn btn-success btn-md" ><NavLink  to="/container">Container Test </NavLink></button>
-</span>
-<span style={{padding: '8px'}}>
-       <button  style={{
-    paddingTop: '8px'}}  className="btn btn-success btn-md" ><NavLink  to="/footer">Footer Test </NavLink></button>
-</span>
-
-<span style={{padding: '8px'}}>
-       <button  style={{
-    paddingTop: '8px'}}  className="btn btn-danger btn-sm" ><NavLink  to="/login">Click to Login </NavLink></button>
-</span>
-
+{/* <div> <ProductForm></ProductForm> </div>    */}
  </BrowserRouter> 
       </React.Fragment>
     );

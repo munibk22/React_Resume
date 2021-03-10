@@ -1,7 +1,7 @@
 import React from"react"
 //  import ClickApp from "./ClickHandler"
- import ClickApp from "../App"
- import {BrowserRouter, Route, NavLink} from "react-router-dom";
+//  import ClickApp from "../App"
+ import {  NavLink} from "react-router-dom";
 
 function sayHello() {
     // alert("The link was clicked.");
